@@ -12,6 +12,7 @@ const list = document.querySelector(`.list`);
 const totalPrice = document.querySelector(`.total-price`);
 
 const addProduct = () => {
+  playAmazin();
   let newProd = {
     name: prodName.value,
     description: prodDesc.value,
@@ -65,11 +66,13 @@ const addProduct = () => {
 addBtn.addEventListener(`click`, addProduct);
 
 const deleteBtn = (event) => {
+  play();
   event.target.parentElement.remove();
   console.log(`buna ziua`);
 };
 
 const buyProduct = (event) => {
+  playChaChing();
   let cardElem = event.target.parentElement;
   let price = parseInt(cardElem.querySelector(`.price`).innerHTML);
   let prodLabel = cardElem.querySelector(`.label`);
@@ -84,7 +87,7 @@ const buyProduct = (event) => {
   } else {
     let productInList = document.createElement(`li`);
     productInList.setAttribute(`id`, `list-${cardElem.id}`);
-    productInList.innerHTML = `${prodLabel.innerHTML} x `;
+    productInList.innerHTML = `${prodLabel.innerHTML}`;
 
     let productQuantity = document.createElement(`div`);
     productQuantity.setAttribute(`id`, `quantity-${cardElem.id}`);

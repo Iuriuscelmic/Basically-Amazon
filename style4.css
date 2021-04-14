@@ -27,7 +27,7 @@ header {
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 50%;
+  width: 40%;
   padding: 6px;
   border-radius: 3px;
   border: 1px solid #ccc;
@@ -35,6 +35,8 @@ header {
 }
 
 .addProducts label {
+  font-size: 110%;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
 }
@@ -46,14 +48,19 @@ header {
 }
 
 .addProductBtn {
+  border: none;
   margin: auto;
   display: flex;
-}
-
-.addProductBtn {
+  cursor: pointer;
   margin-bottom: 10px;
   padding: 10px 20px;
   border-radius: 200px;
+  transition: all 0.3s;
+}
+
+.addProductBtn:hover {
+  background-color: #040333;
+  color: white;
 }
 
 .switch {
@@ -95,7 +102,7 @@ header {
 }
 
 input:checked + .slider {
-  background-color: #d87314;
+  background-color: #040333;
 }
 
 input:focus + .slider {
@@ -134,16 +141,35 @@ input:checked + .slider:before {
 }
 
 .deleteBtn {
+  border: none;
+  width: 30px;
+  background-color: #ffffff;
+  color: #525252;
+  cursor: pointer;
   float: right;
   padding: 3px;
   border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.deleteBtn:hover {
+  background-color: #040333;
+  color: white;
 }
 
 .inStock {
+  border: none;
+  cursor: pointer;
   width: 35%;
   margin: 5px 32.5% 5px 32.5%;
   padding: 5px 10px;
   border-radius: 100px;
+  transition: all 0.3s;
+}
+
+.inStock:hover {
+  background-color: #040333;
+  color: white;
 }
 
 .cart {
@@ -187,13 +213,13 @@ input:checked + .slider:before {
 
 .list {
   border-radius: 15px;
-  min-width: 30%;
+  width: 50%;
   margin: 10px 25% 10px 25%;
   background-color: rgb(44, 44, 44, 0.2);
   margin-top: 20px;
   padding: 5px;
   list-style: none;
-  display: flex;
+  display: table;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
@@ -201,7 +227,9 @@ input:checked + .slider:before {
 }
 
 .list div {
+  margin-right: 15%;
   float: right;
+  /* padding: 5px; */
 }
 
 .total-price {
@@ -214,4 +242,15 @@ input:checked + .slider:before {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.list li {
+  margin-left: 10%;
+  padding: 5px;
+}
+
+.logo {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  width: 18%;
 }

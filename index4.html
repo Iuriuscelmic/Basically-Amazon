@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amazon</title>
+    <title>Amazin</title>
     <link rel="stylesheet" href="style4.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
@@ -13,8 +13,44 @@
   </head>
 
   <body>
+    <audio id="audioAmazin" src="amazin.wav"></audio>
+    <audio id="audioChaChing" src="chaching.mp3"></audio>
+    <audio id="audio" src="SnakeScream.mp3"></audio>
+    
+    <script>
+      function playAmazin() {
+        let audio = document.getElementById("audioAmazin");
+        const newAudio = audio.cloneNode();
+        // audio.pause();
+        // audio.currentTime = 0;
+        newAudio.volume = 0.5;
+        newAudio.play();
+      }
+      function playChaChing() {
+        let audio = document.getElementById("audioChaChing");
+        const newAudio = audio.cloneNode();
+        // audio.pause();
+        // audio.currentTime = 0;
+        newAudio.volume = 0.5;
+        newAudio.play();
+      }
+      function play() {
+      let audio = document.getElementById("audio");
+      const newAudio = audio.cloneNode();
+      // audio.pause();
+      // audio.currentTime = 0;
+      newAudio.volume = 0.5;
+      newAudio.play();
+    }
+    </script>
 
-      <header>Basically Amazon</header>
+      <header>
+        <img
+            src="Amazin.png"
+            alt="Amazin"
+            class="logo"
+          />
+        </header>
 
       <div class="addProducts">
         <label> Add a new Product </label>
@@ -42,6 +78,31 @@
           <div class="total-price">Total Price ($): <div class="total-price-value">0</div></div>
         </div>
       </section>
+  <script>
+    const inputPrice = document.querySelector(`.addPrice`);
+    inputPrice.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      document.getElementById(`addBtn`).click();
+    }
+  })
+
+    const inputDesc = document.querySelector(`.addDesc`);
+    inputDesc.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      document.getElementById(`addBtn`).click();
+    }
+  })
+
+    const inputName = document.querySelector(`.addName`);
+    inputName.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      document.getElementById(`addBtn`).click();
+    }
+  })
+  </script>
   </body>
   <script src="script4.js"></script>
 </html>
